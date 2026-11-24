@@ -41,3 +41,27 @@ popup.style.display = "none";
 } 
 
 }); 
+
+const container = document.getElementById("produktContainer"); 
+for (let produkt of produkter) { 
+
+ console.log(produkt.navn);
+ console.log(produkt.pris);
+
+    container.innerHTML += ` 
+
+        <div class="produktkort"> 
+
+            <img src="${produkt.bilde}" alt="${produkt.navn}"> 
+
+            <h2>${produkt.navn}</h2> 
+
+            <p>${produkt.beskrivelse}</p> 
+
+            <p>${produkt.pris} kr</p> 
+
+        </div> 
+
+    `; 
+
+} 
